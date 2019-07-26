@@ -1,0 +1,16 @@
+
+.wrapper {
+    display: flex;
+}
+
+.border {
+    width: 10vmin;
+    height: 10vmin;
+    outline: 5px solid black;
+    margin: 2vmin;
+}
+
+.image {
+    width: 10vmin;
+    height: 10vmin;
+}

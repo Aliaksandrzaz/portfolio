@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style/css.css">
+    <script defer src="https://unpkg.com/imask"></script>
+    <script defer src="js/app.js" type="module"></script>
+
+</head>
+<body>
+<section class="calculator-container">
+    <h2>Калькулятор стоимости ремонта квартиры в Москве</h2>
+    <div class="calculator" id="calculator">
+
+        <div class="calculator__item square" id="square">
+
+            <div class="square__value">
+                <p>Площадь: </p>
+                <div class="square__output">
+                    <input type="number" min="1" value="10" step="1" id="squareValue">
+                    <span>м<sup>2</sup></span>
+                </div>
+            </div>
+
+            <div class="square__runner-container">
+                <input type="button" id="squareMinus" value="-">
+                <label for="squareMinus" class="type__btn">-</label>
+                <input type="range" value="10" min="1" max="600" id="squareRange" class="slider">
+                <input type="button" id="squarePlus" value="+">
+                <label for="squarePlus" class="type__btn">+</label>
+            </div>
+        </div>
+
+        <div class="calculator__item type type-apartment">
+            <p>Тип квартиры:</p>
+            <input type="radio" name="type-apartment" id='newBuild' checked>
+            <label for="newBuild" class="type__radio">Новостройка</label>
+            <input type="radio" name="type-apartment" id='secondary'>
+            <label for="secondary" class="type__radio">Вторичка</label>
+        </div>
+
+        <div class="calculator__item type type-repair">
+            <p>Вид ремонта:</p>
+                <input type="radio" checked name="type-repair" id="cosmetic">
+                <label for="cosmetic" class="type__radio">Эконом</label>
+                <input type="radio" name="type-repair" id="capital">
+                <label for="capital" class="type__radio">Стандарт</label>
+                <input type="radio" name="type-repair" id="eurorepair">
+                <label for="eurorepair" class="type__radio">Люкс</label>
+        </div>
+
+        <div class="calculator__item cost">
+            <p>Примерная стоимость*</p>
+            <div class="cost__container">
+                <div class="cost__value" id="cost__value">0</div>
+                <input type="button" name="cost" id="makeOrder">
+                <label for="makeOrder" class="type__btn type__btn-big cost__btn button_hola" >Заказать</label>
+            </div>
+            <p>*Примерная стоимость работ <strong>без учета материалов</strong></p>
+        </div>
+    </div>
+</section>
+
+
+<div class="modal-send closeForm" id="modalSend">
+    <div class="modal-send__container ">
+        <div class="modal__header">
+            <input type="button" id="closeFormBtn">
+            <label for="closeFormBtn" class="closeFormBtn">x</label>
+            <h2>Уточнить стоимость</h2>
+        </div>
+
+        <form action="" method="post" class="modal-send__form">
+            <div class="">
+                <p>Примерная цена*</p>
+                <div class="cost__value" id="costForm">0</div>
+            </div>
+
+            <input type="phone" placeholder="Телефон" class="type__phone" id="phoneNumber" required pattern="[0-9]{16,}">
+            <input type="submit" id="sendBtn">
+            <label for="sendBtn" class="type__btn type__btn-big button_hola">Отправить</label>
+            <h3>Спасибо за выбор</h3>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

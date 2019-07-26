@@ -1,0 +1,16 @@
+.bmp, .traik {
+  width: 32px;
+  height: 32px;
+  background: url(../assets/images/army.png) no-repeat;
+  background-size: 54px;
+  position: absolute;
+  z-index: 1000;
+}
+
+.bmp {
+  background-position: 91% 65%;
+}
+
+.traik {
+  background-position: -26% 65%;
+}

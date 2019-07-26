@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/work.css">
+    <script defer src="./../js/app.js"></script>
+    <script defer src="./../js/menu.js"></script>
+    <script defer src="./../js/mouse.js"></script>
+
+</head>
+<body>
+
+<header class="header gradient gradient__work">
+    <div class="logo">
+        Aliaksnadr
+        <br>
+        Shibko
+    </div>
+    <nav class="menu" data-click='click'>
+        <div class="hamburger-container" data-click='click'>
+            <div class="hamburger gradient gradient__work hamburger__close"></div>
+        </div>
+        <!--menu__item-open-->
+        <ul class="menu__item ">
+            <li class="menu__list"><a href="./../index.html" class="menu__link">HOME</a></li>
+            <li class="menu__list"><a href="./work.html" class="menu__link">WORK</a></li>
+            <li class="menu__list"><a href="./contact.html" class="menu__link">CONTACT</a></li>
+        </ul>
+    </nav>
+    <div class="gradient gradient__work">
+        FRONT-END
+        <br>
+        DEVELOPER
+    </div>
+</header>
+
+<main class="main">
+    <div class="moon">
+        <img src="./../style/assets/moon.png" alt="" title="">
+    </div>
+
+    <section class="work">
+        <div class="item__work item__work-left">
+            <h2><a class="work__link" href="./../work/guessColor/index.html">Guess image</a></h2>
+        </div>
+
+        <div class="item__work item__work-right">
+            <h2><a class="work__link" href="./../work/piroll/index.html">Piroll</a></h2>
+        </div>
+
+        <div class="item__work item__work-left">
+            <h2><a class="work__link" href="./../work/calculator/index.html">Calculator</a></h2>
+        </div>
+
+        <div class="item__work item__work-right">
+            <h2><a class="work__link" href="./../work/dune/dist/index.html">Dune</a></h2>
+        </div>
+    </section>
+
+
+</main>
+
+<canvas id="canvas"></canvas>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body {
+    overflow: hidden;
+}
+
+.gradient__work {
+    background-image: linear-gradient(45deg, #acacac, #4d4d4d);
+}
+
+.main {
+    /*height: 80vh;*/
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 80vh;
+}
+
+.moon {
+
+}
+
+.moon > img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -990;
+    width: 50vmin;
+    height: 100vmin;
+    transform: scale(1.0);
+    animation: moonPlay linear infinite 20s;
+}
+
+@keyframes moonPlay {
+    from {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1.0);
+    }
+}
+
+.work {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(4, 25%);
+}
+
+.work__link {
+    font-size: 40px;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, #acacac, #4d4d4d);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0.7;
+    position: relative;
+}
+
+
+.item__work-left {
+    justify-self: left;
+}
+
+.item__work-right {
+    justify-self: right;
+}
+
+

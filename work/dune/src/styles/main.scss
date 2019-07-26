@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  width: 121%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#wrapper {
+  background-size: contain;
+  background: url("../assets/images/map.png") no-repeat;
+  display: grid;
+  grid-template-columns: repeat(32, 64px);
+  grid-template-rows: repeat(64, 64px);
+  grid-row-gap: 0;
+  width: 2048px;
+  height: 2048px;
+  margin-top: 50px;
+}
+
+#headerMenu {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#menu, #energy, #credits {
+  height: 40px;
+  border: 5px solid;
+  border-image: url(../assets/images/BOX10.png) 5 round;
+  background-color: black;
+  color: red;
+  text-align: center;
+  line-height: 40px;
+}
+
+#credits::before {
+  content: 'Ресурсы: ';
+}
+
+#energy::before {
+  content: 'Энергия: ';
+}
+
+#sideMenu {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  z-index: 1000;
+  height: calc(100% - 15px * 5);
+  width: 20%;
+  border: 15px solid;
+  border-image: url(../assets/images/BOX10.png) 15 round;
+  background-color: darkred;
+}
+
+#buttonSideMenu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 100px);
+  justify-items: center;
+  align-items: center;
+}
+
+#buttonBuildSideMenu, #buttonSolderSideMenu, #buttonMachineSideMenu {
+  width: 60%;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px solid green;
+  background-color: black;
+  border-image: url(../assets/images/BOX10.png) 15 round;
+  line-height: 50px;
+  text-align: center;
+  color: red;
+}
+
+#buttonBuildSideMenu:active, #buttonSolderSideMenu:active, #buttonMachineSideMenu:active {
+  box-shadow: inset 0 0 5px 5px black;
+}
+
+#buildSideMenu, #solderSideMenu, #machineSideMenu {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 120px);
+  justify-items: center;
+  display: none;
+}
+
+#playground, #barrack, #gunshotTurret, #windStation, #processingPlant, #easyFactory {
+  height: 80px;
+  width: 80%;
+  outline: 1px solid saddlebrown;
+  text-align: center;
+  background: url("../assets/images/sideMenuSprite.png") no-repeat;
+  background-size: 200% 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  border: 10px solid green;
+  border-image: url(../assets/images/BOX10.png) 15 round;
+}
+
+#playground:active, #barrack:active, #gunshotTurret:active, #windStation:active, #processingPlant:active, #easyFactory:active, #infantry:active, #troopers:active, #traik:active, #bmp:active {
+  box-shadow: inset saddlebrown 0 0 5px 5px;
+}
+
+#playground {
+  background-position: 100% 0px;
+}
+
+#barrack {
+  background-position: 0px 0px;
+}
+
+#windStation {
+  background-position: 100% -200px;
+}
+
+#processingPlant {
+  background-position: 100% -100px;
+}
+
+#easyFactory {
+  background-position: 0px;
+}
+
+#gunshotTurret {
+  background-position: 0px -200px;
+}
+
+#infantry, #troopers {
+  height: 100px;
+  width: 80%;
+  background: url("../assets/images/sideMenuSpriteSolders.png") no-repeat;
+  background-size: 100% 200%;
+  border: 10px solid green;
+  border-image: url(../assets/images/BOX10.png) 15 round;
+}
+
+#infantry {
+  background-position: 0px 0px;
+}
+
+#troopers {
+  background-position: 0px 100%;
+}
+
+#traik, #bmp, #tank {
+  height: 100px;
+  width: 80%;
+  background: url("../assets/images/sideMenuMachine.png") no-repeat;
+  background-size: 100% 200%;
+  border: 10px solid green;
+  border-image: url(../assets/images/BOX10.png) 15 round;
+}
+
+#bmp {
+  background-position: 0px 100%;
+}
+
+#traik {
+  background-position: 0px 0px;
+}
+
+.gridClass {
+  width: 64px;
+  height: 64px;
+}
+
+.gridClass:hover {
+  outline: 1px solid green;
+  background-color: rgba(5, 5, 5, 0.5);
+}
+
+.machine {
+  width: 32px;
+  height: 32px;
+  background: url(../assets/images/v1.png) -2942px -51px;
+  background-size: 1500px;
+  position: absolute;
+}
+
+#saveGame, #loadGame, #restart {
+  display: none;
+}
+
+#saveGame, #loadGame, #restart {
+  display: none;
+  height: 40px;
+  border: 5px solid;
+  border-image: url(../assets/images/BOX10.png) 5 round;
+  background-color: black;
+  color: red;
+  text-align: center;
+  line-height: 40px;
+}
+
+#menu:hover {
+  #saveGame, #loadGame, #restart {
+    display: block;
+  }
+}
+

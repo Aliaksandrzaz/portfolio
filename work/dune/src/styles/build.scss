@@ -1,0 +1,51 @@
+.base, .barrack, .playground, .windStation, .processingPlant, .easyFactory, .gunshotTurret, .hpBuild {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  background: url("../assets/images/v1.png") no-repeat;
+}
+
+.base {
+  background-size: 1900px;
+  background-position: -27px -26px;
+}
+
+.barrack {
+  background-size: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-position: -66px -7px;
+}
+
+.playground {
+  background-size: 72px;
+  background: url("../assets/images/playground.jpg") no-repeat -7px -4px;
+}
+
+.windStation {
+  background-size: 1560px;
+  background-position: -24px -20px;
+}
+
+.processingPlant {
+  background-size: 1180px;
+  background-position: -172px -7px;
+}
+
+.easyFactory {
+  background-size: 1350px;
+  background-position: -345px -11px;
+}
+
+.gunshotTurret {
+  background-size: 2000px;
+  background-position: -825px -14px;
+}
+
+.hpBuild {
+  height: 14px;
+  background-color: green;
+  bottom: -14px;
+  text-align: center;
+}

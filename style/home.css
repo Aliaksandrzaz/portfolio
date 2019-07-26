@@ -1,0 +1,55 @@
+.main {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-items: center;
+    align-items: center;
+    color: transparent;
+    position: relative;
+    font-size: 2rem;
+    /**/
+    /*opacity: 0;*/
+}
+
+.main > img {
+    width: 40vmin;
+    height: 40vmin;
+    justify-self: end;
+    animation: animationAstronaut linear 10s infinite;
+}
+
+@keyframes animationAstronaut {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(30deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    75% {
+        transform: rotateZ(-30deg);
+    }
+
+    to {
+        transform: rotateZ(0deg);
+    }
+}
+
+.about {
+    justify-self: start;
+}
+
+.about > h1 {
+    letter-spacing: 30px;
+    font-size: 5.2rem;
+    font-weight: 900;
+}
+
+.about > p {
+    margin-left: 20px;
+}
